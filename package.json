@@ -1,0 +1,28 @@
+{
+  "name": "controle",
+  "version": "1.0.0",
+  "description": "O Controle+ é uma ferramenta completa para empresas que desejam gerenciar seus estoques de forma eficiente e simplificada. Com uma interface intuitiva e funcionalidades avançadas, o sistema permite o controle de entradas e saídas, rastreamento de produtos e geração de relatórios detalhados.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . --platform=win32 --arch=x64 --out=dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosmorais-git/Controle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosmorais-git/Controle/issues"
+  },
+  "homepage": "https://github.com/carlosmorais-git/Controle#readme",
+  "devDependencies": {
+    "electron": "^34.2.0"
+  },
+  "dependencies": {
+    "controle": "file:"
+  }
+}

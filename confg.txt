@@ -1,0 +1,55 @@
+------------------------------------------------------------|
+
+Inicie um projeto Node.js:
+npm init -y
+
+------------------------------------------------------------|
+
+Instale o Electron como uma dependência do projeto:
+npm install electron --save-dev
+
+------------------------------------------------------------|
+
+Crie a seguinte estrutura de arquivos na pasta do projeto:
+meu-sistema-desktop/
+├── main.js
+├── index.html
+├── package.json
+└── style.css
+
+------------------------------------------------------------|
+
+No arquivo package.json, adicione o seguinte script para iniciar o aplicativo:
+{
+  "name": "meu-sistema-desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^26.0.0"
+  }
+}
+
+------------------------------------------------------------|
+
+Para iniciar o aplicativo:
+npm start
+
+------------------------------------------------------------|
+
+Adicione um script no package.json para empacotar o aplicativo:
+"scripts": {
+  "package": "electron-packager . --platform=win32 --arch=x64 --out=dist"
+}
+
+------------------------------------------------------------|
+
+Empacotar o aplicativo
+npm install electron-packager --save-dev
+
+------------------------------------------------------------|
+
+Execute o script para empacotar
+npm run package

@@ -1,0 +1,29 @@
+<!--Essa página exibe todos os itens do estoque.-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Estoque Atual</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Característica</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ item['name'] }}</td>
+            <td>{{ item['quantity'] }}</td>
+            <td>{{ item['caracteristic'] }}</td>
+            <td>
+                <a href="{{ url_for('update_item', item_id=item['id']) }}">Editar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

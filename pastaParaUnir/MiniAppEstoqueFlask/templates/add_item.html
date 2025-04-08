@@ -1,0 +1,18 @@
+<!--Formulário para adicionar novos itens.-->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Adicionar Item</h2>
+<form method="post">
+    <label for="name">Nome do Item:</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="quantity">Quantidade:</label>
+    <input type="number" name="quantity" id="quantity" required>
+
+    <label for="quantity">Características:</label>
+    <input type="text" name="name" id="caracteristic" required>
+
+    <button type="submit">Adicionar</button>
+</form>
+{% endblock %}

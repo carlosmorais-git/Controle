@@ -1,0 +1,17 @@
+<!--Formulário para atualizar a quantidade de um item existente.-->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Atualizar Quantidade</h2>
+<div>
+    <form method="post">
+    <p>Item: {{ item['name'] }}</p>
+    <label for="quantity">Nova Quantidade:</label>
+    <input type="number" name="quantity" id="quantity" value="{{ item['quantity'] }}" required><br>
+    <label for="quantity">  Novas Características:</label>
+    <input type="text" name="name" id="caracteristic" value="{{ item['caracteristic'] }}" required><br>
+
+    <button type="submit">Atualizar</button>
+</form>
+</div>
+{% endblock %}
